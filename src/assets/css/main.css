@@ -1,0 +1,79 @@
+.cardStyle {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+* {
+    transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 1160px) {
+    .mainContent {
+        margin: 2rem;
+    }
+}
+
+@media screen and (min-width: 1160px) {
+    .mainContent {
+        margin: 2rem 10rem;
+    }
+
+    .navStyle {
+        padding-left: 10rem !important;
+        padding-right: 10rem !important;
+    }
+
+}
+
+.navStyle {
+    background: #2da6ec;
+}
+
+.imageCardStyle {
+    max-height: 20rem;
+    object-fit: cover;
+    border-top-left-radius: 1rem !important;
+    border-top-right-radius: 1rem !important;
+}
+
+.card {
+    border-radius: 1rem !important;
+    border: none !important;
+    box-shadow: 0 0.8px 2.2px rgba(0, 0, 0, 0.02),
+    0 1.9px 5.3px rgba(0, 0, 0, 0.028),
+    0 3.6px 10px rgba(0, 0, 0, 0.035),
+    0 6.5px 17.9px rgba(0, 0, 0, 0.042),
+    0 12.1px 33.4px rgba(0, 0, 0, 0.05),
+    0 29px 80px rgba(0, 0, 0, 0.07);
+}
+
+#widget img {
+    border-radius: 1rem;
+}
+
+.footer {
+    background: #2da6ec;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}
+
+img:hover {
+    transform: scale(1.025);
+    border-bottom-left-radius: 1rem !important;
+    border-bottom-right-radius: 1rem !important;
+}
+
+.site-title {
+    color: wheat;
+}
+
+.footer li {
+    list-style-type: none;
+}
+
+.footer li a {
+    text-decoration: none;
+    color: white;
+}

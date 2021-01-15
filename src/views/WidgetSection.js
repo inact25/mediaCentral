@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import WidgetPost from "../components/WidgetPost";
 import {socialLink} from "../variables/SocialLink";
+import {linkList} from "../variables/NavigationLink";
+import {sitePartner} from "../variables/SitesData";
 
 class WidgetSection extends Component {
     render() {
@@ -24,36 +26,13 @@ class WidgetSection extends Component {
                         <div className="card-body">
                             <div className="card-title font-weight-bold">Kategori</div>
                             <div className="row">
-                                <div className="col mb-2">
-                                    <button
-                                        className="btn-sm btn-block btn btn-outline-primary rounded-pill text-center font-weight-light">Bisnis
-                                    </button>
-                                </div>
-                                <div className="col mb-2">
-                                    <button
-                                        className="btn-sm btn-block btn btn-outline-primary rounded-pill text-center font-weight-light">Selebritas
-                                    </button>
-                                </div>
-                                <div className="col mb-2">
-                                    <button
-                                        className="btn-sm btn-block btn btn-outline-primary rounded-pill text-center font-weight-light">Kesehatan
-                                    </button>
-                                </div>
-                                <div className="col mb-2">
-                                    <button
-                                        className="btn-sm btn-block btn btn-outline-primary rounded-pill text-center font-weight-light">Sains
-                                    </button>
-                                </div>
-                                <div className="col mb-2">
-                                    <button
-                                        className="btn-sm btn-block btn btn-outline-primary rounded-pill text-center font-weight-light">Olahraga
-                                    </button>
-                                </div>
-                                <div className="col mb-2">
-                                    <button
-                                        className="btn-sm btn-block btn btn-outline-primary rounded-pill text-center font-weight-light">Teknologi
-                                    </button>
-                                </div>
+                                {linkList.map(linkData =>
+                                    <div className="col mb-2">
+                                        <a href={linkData.url}
+                                           className="btn-sm btn-block btn btn-outline-primary rounded-pill text-center font-weight-light">{linkData.title}
+                                        </a>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>
@@ -72,16 +51,13 @@ class WidgetSection extends Component {
                         <div className="card-body">
                             <div className="card-title font-weight-bold">Kerjasama</div>
                             <div className="row">
-                                <div className="col-6">
-                                    <button
-                                        className="btn-sm btn-block btn btn-outline-primary rounded-pill text-center font-weight-light">Idcsharp.com
-                                    </button>
-                                </div>
-                                <div className="col-6">
-                                    <button
-                                        className="btn-sm btn-block btn btn-outline-primary rounded-pill text-center font-weight-light">Javapixa.com
-                                    </button>
-                                </div>
+                                {sitePartner.map(partnerData =>
+                                    <div className="col-6">
+                                        <a href={partnerData.url}
+                                           className="btn-sm btn-block btn btn-outline-primary rounded-pill text-center font-weight-light">{partnerData.title}
+                                        </a>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>

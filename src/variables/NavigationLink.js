@@ -5,7 +5,7 @@ export const linkList = [
     },
     {
         title: "Bisnis",
-        url: "business"
+        url: "business",
     },
     {
         title: "Selebritas",

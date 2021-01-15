@@ -6,7 +6,6 @@ class NavigationSection extends Component {
 
     render() {
         const {searchData, searchChange, searchButton, btnStatus} = this.props
-        console.log(searchData)
         return (
             <nav className="navbar navbar-expand-lg navbar-dark sticky-top mb-5 navStyle">
                 <button className="navbar-toggler" type="button" data-toggle="collapse"

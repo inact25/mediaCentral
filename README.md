@@ -18,4 +18,6 @@ mediaCentral adalah media yang menggabungkan berbagai berita indonesia dari berb
 - https://mediacentral.web.app/
 `coz api retriction in production build, this project only can be run in localhost`
 
+####still confused with this project structure, any help will be appreciated
+
 ![img.png](img.png)

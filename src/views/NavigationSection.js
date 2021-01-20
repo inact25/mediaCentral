@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {linkList} from '../variables/NavigationLink'
+import SearchBar from "../components/SearchBar";
 
 
 class NavigationSection extends Component {
@@ -22,14 +23,8 @@ class NavigationSection extends Component {
                             </li>
                         )}
                     </ul>
-                    <form className="form-inline my-2 my-lg-0">
-                        <input className="form-control rounded-pill mr-sm-2" type="search"
-                               onChange={(e) => searchChange(e)} value={searchData} placeholder="Search"
-                               aria-label="Search"/>
-                        <button className="btn btn-outline-light rounded-pill my-2 my-sm-0" type="submit"
-                                disabled={btnStatus} onClick={(e) => searchButton(e)}>Search
-                        </button>
-                    </form>
+                    <SearchBar funcSubmit={searchButton} title={"Cari"} funcChange={searchChange}
+                               searchValue={searchData} btnStatus={btnStatus}/>
                 </div>
             </nav>
         );

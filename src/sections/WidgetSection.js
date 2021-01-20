@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import WidgetPost from "../components/WidgetPost";
 import {socialLink} from "../variables/SocialLink";
-import {linkList} from "../variables/NavigationLink";
+import {navigationLink} from "../variables/NavigationLink";
 import {sitePartner} from "../variables/SitesData";
 
 class WidgetSection extends Component {
@@ -26,7 +26,7 @@ class WidgetSection extends Component {
                         <div className="card-body">
                             <div className="card-title font-weight-bold">Kategori</div>
                             <div className="row">
-                                {linkList.map(linkData =>
+                                {navigationLink.map(linkData =>
                                     <div className="col mb-2">
                                         <a href={linkData.url}
                                            className="btn-sm btn-block btn btn-outline-primary rounded-pill text-center font-weight-light">{linkData.title}

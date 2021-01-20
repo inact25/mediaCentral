@@ -1,4 +1,4 @@
-export const linkList = [
+export const navigationLink = [
     {
         title: "Home",
         url: "/general"

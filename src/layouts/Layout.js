@@ -1,10 +1,10 @@
 import React, {Component} from 'react';
 import '../assets/css/main.css'
-import NavigationSection from '../views/NavigationSection'
-import WidgetSection from "../views/WidgetSection";
-import FooterSection from "../views/FooterSection";
-import HeaderSection from "../views/HeaderSection";
-import PostSection from "../views/PostSection";
+import NavigationSection from '../sections/NavigationSection'
+import WidgetSection from "../sections/WidgetSection";
+import FooterSection from "../sections/FooterSection";
+import HeaderSection from "../sections/HeaderSection";
+import PostSection from "../sections/PostSection";
 import {getNews, searchNews} from "../services/apis/newsApi";
 import Swal from "sweetalert2";
 

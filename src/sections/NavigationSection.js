@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {linkList} from '../variables/NavigationLink'
+import {navigationLink} from '../variables/NavigationLink'
 import SearchBar from "../components/SearchBar";
 
 
@@ -17,7 +17,7 @@ class NavigationSection extends Component {
 
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav mr-auto">
-                        {linkList.map(linkData =>
+                        {navigationLink.map(linkData =>
                             <li className="nav-item">
                                 <a className="nav-link" href={linkData.url}>{linkData.title}<span className="sr-only"/></a>
                             </li>

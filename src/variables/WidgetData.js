@@ -71,7 +71,7 @@ const Social = () => {
 };
 
 export const WidgetData = [{
-    title: "Ads1",
+    title: "",
     data: <Ads1/>
 }, {
     title: "Bisnis hari ini",
@@ -80,13 +80,13 @@ export const WidgetData = [{
     title: "Kategori",
     data: <Category/>
 }, {
-    title: "Ads2",
+    title: "",
     data: <Ads2/>
 }, {
     title: "Kerjasama",
     data: <Partner/>
 }, {
-    title: "Ads3",
+    title: "",
     data: <Ads3/>
 }, {
     title: "Social",

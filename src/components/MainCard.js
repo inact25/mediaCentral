@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 class MainCard extends Component {
     render() {
         const {image, author, date, title, description, url} = this.props
+        const newDate = new Date(date)
         return (
             <div className="card cardStyle">
                 <a href={url}><img className="card-img-top imageCardStyle"
@@ -15,7 +16,7 @@ class MainCard extends Component {
                         </div>
                         <div className="col-6 text-right text-secondary"
                              style={{fontSize: "12px"}}>
-                            <p>{date}</p>
+                            <p>{newDate.toDateString()}</p>
                         </div>
                     </div>
                     <a href={url}><h5 className="card-title">{title}</h5></a>

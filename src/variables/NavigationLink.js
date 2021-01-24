@@ -1,7 +1,7 @@
 export const navigationLink = [
     {
         title: "Home",
-        url: "/general"
+        url: "general"
     },
     {
         title: "Bisnis",

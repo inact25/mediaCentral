@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
 import {navigationLink} from '../variables/NavigationLink'
+import {Link} from 'react-router-dom'
 import SearchBar from "../components/SearchBar";
 
 
 class NavigationSection extends Component {
 
     render() {
-        const {searchData, searchChange, searchButton, btnStatus} = this.props
+        const {linkClick, searchData, searchChange, searchButton, btnStatus} = this.props
         return (
             <nav className="navbar navbar-expand-lg navbar-dark sticky-top mb-5 navStyle">
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
@@ -19,7 +20,8 @@ class NavigationSection extends Component {
                     <ul className="navbar-nav mr-auto">
                         {navigationLink.map(linkData =>
                             <li className="nav-item">
-                                <a className="nav-link" href={linkData.url}>{linkData.title}<span className="sr-only"/></a>
+                                <Link className="nav-link" onClick={() => linkClick(linkData.url)}
+                                      to={linkData.url}>{linkData.title}<span className="sr-only"/></Link>
                             </li>
                         )}
                     </ul>

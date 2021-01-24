@@ -43,8 +43,11 @@ class Layout extends Component {
         })
     }
 
-    getNewsData = () => {
-        getNews(this.state.newsID)
+    getNewsData = (id) => {
+        this.setState({
+            isLoaded: false
+        })
+        getNews(id)
             .then((res) => {
                 this.setState({
                     newsData: res.articles,
@@ -56,10 +59,11 @@ class Layout extends Component {
     }
 
     componentDidMount() {
-        this.getNewsData()
+        this.getNewsData(this.state.newsID)
     }
 
     render() {
+        console.log(this.state.newsID)
         return (
             <div>
                 <section id="header">
@@ -67,7 +71,8 @@ class Layout extends Component {
                 </section>
                 <section id="navigation">
                     <NavigationSection searchData={this.state.searchData} searchButton={this.searchPostData}
-                                       searchChange={this.searchOnChange} btnStatus={this.state.btnStatus}/>
+                                       searchChange={this.searchOnChange} btnStatus={this.state.btnStatus}
+                                       linkClick={this.getNewsData}/>
                 </section>
                 <section className="mainContent">
                     <div className="row">

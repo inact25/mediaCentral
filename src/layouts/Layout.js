@@ -80,7 +80,7 @@ class Layout extends Component {
                             <PostSection data={this.state.newsData} load={this.state.isLoaded}/>
                         </section>
                         <section id="widget" className="col-12 col-md-12 col-lg-4 col-xl-4">
-                            <WidgetSection/>
+                            <WidgetSection linkClick={this.getNewsData}/>
                         </section>
                     </div>
                 </section>

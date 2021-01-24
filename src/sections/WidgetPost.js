@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Swal from 'sweetalert2'
 import {getNews} from "../services/apis/newsApi";
 import loading from '../assets/img/loading.gif'
-import EmptyCard from "../components/EmptyCard";
 
 class WidgetPost extends Component {
 
@@ -30,8 +29,7 @@ class WidgetPost extends Component {
     render() {
         const data = this.state.newsData
         return (
-
-            <EmptyCard title={"Bisnis Hari ini"}>
+            <>
                 {this.state.isLoaded ?
                     <div className="row">
                         {data.map(businessData =>
@@ -56,7 +54,7 @@ class WidgetPost extends Component {
                         </div>
                     </div>
                 }
-            </EmptyCard>
+            </>
         );
     }
 }
